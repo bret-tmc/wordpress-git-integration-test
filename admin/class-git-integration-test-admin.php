@@ -53,6 +53,28 @@ class Git_Integration_Test_Admin {
 		$this->version = $version;
 
 	}
+	
+	public function check_if_plugin_was_updated() {
+		
+		$db_version = get_option( 'git_int_test_ver' );
+		
+		$new_version_detected = false;
+		
+		if ( ! isset( $db_version ) || ( isset( $db_version ) && strlen( $db_version ) <= 0 ) ) {
+			update_option( 'git_int_test_ver', $this->version );
+			$db_version = $this->version;
+		}
+		
+		if ( $db_version !== $this->version ) {
+			$new_version_detected = true;
+		}
+		
+		
+		if ( $new_version_detected ) {
+			// run code to handle plugin update incompatibilities 
+		}
+		
+	}
 
 	/**
 	 * Register the stylesheets for the admin area.
