@@ -156,6 +156,8 @@ class Git_Integration_Test {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		
+		$this->loader->add_action( 'plugins_loaded', $plugin_admin, 'check_if_plugin_was_updated' );
 
 	}
 
