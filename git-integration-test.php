@@ -23,7 +23,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       git-integration-test
  * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/chiragu/wordpress-integration-test
+ * GitHub Plugin URI: https://github.com/chiragu/wordpress-git-integration-test
  */
 
 // If this file is called directly, abort.
